@@ -43,9 +43,9 @@ All models were fine-tuned with the last classification layer adjusted to output
 brain_tumor_dataset/
 ├── brain_mri_app/
 │   └── streamlit_app.py
-├── models/
-│   ├── vgg_model.pth
-│   └── convnext_model.pth
+├── Notebooks/
+│   ├── EDA_and_Baseline_Model_notebook.ipynb
+│   └── Models_Development_and_Evaluation.ipynb
 ├── EDA_on_dataset.ipynb
 ├── Second_model_2.ipynb
 └── README.md
