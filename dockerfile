@@ -19,7 +19,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY streamlit_app ./streamlit_app
 COPY Model_Evaluation.png ./Model_Evaluation.png
 COPY README.md ./README.md
-# (You can also do: COPY . .  but then you must be sure to ignore the venv via .dockerignore)
+
 
 # Expose Streamlit's default port
 EXPOSE 8501
