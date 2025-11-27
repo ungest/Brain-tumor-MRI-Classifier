@@ -1,6 +1,6 @@
 # Brain Tumor MRI Classification
 
-This project focuses on classifying brain tumors into three categories — **Meningioma**, **Glioma**, and **Pituitary** — using MRI scans. We leverage CNN-based architectures including **VGG16**, **ConvNeXt-Small**, and **ViT** for comparative performance analysis. The app interface is built using **Streamlit**.
+This project focuses on classifying brain tumors into three categories — **Meningioma**, **Glioma**, and **Pituitary** — using MRI scans. I leveraged CNN-based architectures, including **VGG16**, **ConvNeXt-Small**, and **ViT** for comparative performance analysis. The app interface is built using **Streamlit**.
 
 ## Dataset
 
