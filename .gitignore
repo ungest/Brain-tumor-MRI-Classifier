@@ -1,1 +1,3 @@
 "streamlit_app/*pth" 
+*.pth
+mri_cnn_env

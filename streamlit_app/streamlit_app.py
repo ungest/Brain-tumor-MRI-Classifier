@@ -1,4 +1,5 @@
 import streamlit as st
+from pathlib import Path
 from PIL import Image
 import torch
 import torch.nn as nn
@@ -20,14 +21,18 @@ class Load_Model:
     def vgg_model():
         model = models.vgg16(weights=models.VGG16_Weights.DEFAULT)
         model.classifier[6] = nn.Linear(4096, 3)  # 3 output classes
-        model.load_state_dict(torch.load("vgg_model_2.pth", map_location="cpu"))
+
+        model_path = Path(__file__).parent / "vgg_model_2.pth"
+        model.load_state_dict(torch.load(model_path, map_location="cpu"))
         model.eval()
         return model
     
     def convnext():
         model = models.convnext_small(weights=models.ConvNeXt_Small_Weights.DEFAULT)
         model.classifier[2] = nn.Linear(model.classifier[2].in_features, 3)
-        model.load_state_dict(torch.load("convnext_model.pth", map_location="cpu"))
+
+        model_path = Path(__file__).parent / "convnext_model.pth"
+        model.load_state_dict(torch.load(model_path, map_location="cpu"))
         model.eval()
         return model
 
