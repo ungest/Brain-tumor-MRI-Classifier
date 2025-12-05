@@ -33,6 +33,7 @@ All models were fine-tuned with the last classification layer adjusted to output
 
 ## Streamlit App
 
+#### Access the app here: https://bit.ly/48YSyxR
 * Uploads single MRI images and predicts tumor type
 * Displays class-wise prediction confidence with charts
 * Handles grayscale → RGB conversion and ImageNet normalization

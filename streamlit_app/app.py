@@ -131,7 +131,7 @@ left_col, right_col = st.columns([1, 2])
 # Left column: uploader & preview
 # ------------------------------------------------------------
 with left_col:
-    st.subheader("1️⃣ Upload MRI Image")
+    st.subheader("📤 Upload MRI Image")
     uploaded_file = st.file_uploader(
         "Upload an MRI image (.jpg, .png, .jpeg)",
         type=["jpg", "png", "jpeg"],
@@ -149,7 +149,7 @@ with left_col:
 # ------------------------------------------------------------
 if image is not None:
     with right_col:
-        st.subheader("2️⃣ Analysis Results")
+        st.subheader("🩺 Analysis Results")
 
         # Preprocess
         input_tensor = transform(image).unsqueeze(0)
