@@ -37,19 +37,7 @@ All models were fine-tuned with the last classification layer adjusted to output
 * Displays class-wise prediction confidence with charts
 * Handles grayscale → RGB conversion and ImageNet normalization
 
-## 🗃️ Project Structure
 
-```
-brain_tumor_dataset/
-├── brain_mri_app/
-│   └── streamlit_app.py
-├── Notebooks/
-│   ├── EDA_and_Baseline_Model_notebook.ipynb
-│   └── Models_Development_and_Evaluation.ipynb
-├── EDA_on_dataset.ipynb
-├── Second_model_2.ipynb
-└── README.md
-└── requirements.txt
 
 ```
 
