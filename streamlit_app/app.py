@@ -7,25 +7,25 @@ import torchvision.transforms as transforms
 import torchvision.models as models
 import pandas as pd
 
-# ---- Define labels map ----
+# Define labels map
 labels_map = {0: "Meningioma", 1: "Glioma", 2: "Pituitary"}
 
-# ---- Load model ----
+# Load model
 @st.cache_resource
 # Load VGG Model
 
 class Load_Model:
-    def __init__(self):
-        pass
+    # def __init__(self):
+    #     pass
     
-    def vgg_model():
-        model = models.vgg16(weights=models.VGG16_Weights.DEFAULT)
-        model.classifier[6] = nn.Linear(4096, 3)  # 3 output classes
+    # def vgg_model():
+    #     model = models.vgg16(weights=models.VGG16_Weights.DEFAULT)
+    #     model.classifier[6] = nn.Linear(4096, 3)  # 3 output classes
 
-        model_path = Path(__file__).parent / "vgg_model_2.pth"
-        model.load_state_dict(torch.load(model_path, map_location="cpu"))
-        model.eval()
-        return model
+    #     model_path = Path(__file__).parent / "vgg_model_2.pth"
+    #     model.load_state_dict(torch.load(model_path, map_location="cpu"))
+    #     model.eval()
+    #     return model
     
     def convnext():
         model = models.convnext_small(weights=models.ConvNeXt_Small_Weights.DEFAULT)
@@ -40,7 +40,7 @@ class Load_Model:
 
 model = Load_Model.convnext()
 
-# ---- Define transform with RGB conversion ----
+# Define transform with RGB conversion
 transform = transforms.Compose([
     transforms.Lambda(lambda img: img.convert("RGB")),  # ✅ Force RGB
     transforms.Resize((224, 224)),
@@ -51,8 +51,8 @@ transform = transforms.Compose([
     )
 ])
 
-# ---- Streamlit UI ----
-st.title("🧠 Brain Tumor MRI Classifier (VGG16)")
+# Streamlit UI
+st.title("🧠 Brain Tumor MRI Classifier")
 st.write("Upload an MRI image to classify it as Meningioma, Glioma, or Pituitary tumor.")
 
 uploaded_file = st.file_uploader("Upload an MRI image (.jpg, .png)", type=["jpg", "png", "jpeg"])

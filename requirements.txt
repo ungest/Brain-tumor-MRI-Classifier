@@ -2,3 +2,4 @@ streamlit
 torch
 torchvision
 Pillow
+huggingface_hub
